@@ -1,0 +1,100 @@
+.imagesPreviewDivSkeleton div {
+
+    width: 64px;
+    height: 64px;
+    margin-left: -16px;
+}
+
+.imgShimmer {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+}
+
+.launchedTokensWithTitleSkeleton {
+    width: 194px;
+    height: 30px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 16px;
+}
+
+.launchedTokensSkeleton {
+    width: 70px;
+    height: 61px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 16px;
+}
+
+.noOfChainsSkeleton {
+    width: 70px;
+    height: 61px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 16px;
+}
+
+.texth2Skeleton {
+    width: 77px;
+    height: 52px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 16px;
+}
+
+.top3TokenAmountSkeleton {
+    width: 61px;
+    height: 41px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 16px;
+}
+
+.potentialGainSkeleton {
+    width: 61px;
+    height: 41px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 16px;
+}
+
+.top3TokensSkeleton div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.xAmountSkeleton {
+    width: 82px;
+    height: 21px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6d6c6c 25%, #717070 37%, #777575 63%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 16px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}

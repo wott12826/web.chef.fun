@@ -1,0 +1,292 @@
+Uri: https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js
+File Name: C:\Downloaded Web Sites\web.chef.fun\ajax\libs\numeral.js\2.0.6\numeral.min.js
+Content Type: application/javascript
+
+Uri: https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap
+File Name: C:\Downloaded Web Sites\web.chef.fun\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aX8.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf
+File Name: C:\Downloaded Web Sites\web.chef.fun\s\montserrat\v30\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf
+Content Type: font/ttf
+
+Uri: https://web.chef.fun/
+File Name: C:\Downloaded Web Sites\web.chef.fun\index.htm
+Content Type: text/html
+
+Uri: https://web.chef.fun/assets/icons/book.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\book.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/chevron-down.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\chevron-down.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/chevron-left.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\chevron-left.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/chevron-right.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\chevron-right.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/coingecko.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\coingecko.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/dextools.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\dextools.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/telegraIcon.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\telegraIcon.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/uniswap.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\uniswap.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/assets/icons/xIcon.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\assets\icons\xIcon.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/css/custom.css
+File Name: C:\Downloaded Web Sites\web.chef.fun\css\custom.css
+Content Type: text/css
+
+Uri: https://web.chef.fun/css/main.min.css
+File Name: C:\Downloaded Web Sites\web.chef.fun\css\main.min.css
+Content Type: text/css
+
+Uri: https://web.chef.fun/images/chains/avalanche.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\avalanche.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/base.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\base.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/bnb.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\bnb.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/ethereum.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\ethereum.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/mystery-01.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\mystery-01.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/mystery-02.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\mystery-02.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/mystery-03.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\mystery-03.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/solana.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\solana.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/chains/ton.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\chains\ton.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/deploy/bonding-curve.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\deploy\bonding-curve.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/deploy/community-engagement.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\deploy\community-engagement.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/deploy/deploy-preview.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\deploy\deploy-preview.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/favicon.ico
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\favicon.ico
+Content Type: image/vnd.microsoft.icon
+
+Uri: https://web.chef.fun/images/hero/cupcacke-01.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\cupcacke-01.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/cupcacke-02.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\cupcacke-02.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/cupcacke-03.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\cupcacke-03.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/cupcacke-04.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\cupcacke-04.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/cupcacke-05.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\cupcacke-05.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/deploy-text.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\deploy-text.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/hero/plus-button.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\plus-button.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/praline-01.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\praline-01.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/praline-02.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\praline-02.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/praline-03.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\praline-03.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/praline-04.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\praline-04.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/star-01.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\star-01.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/star-02.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\star-02.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/token-polygon-center.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\token-polygon-center.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/hero/token-polygon.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\hero\token-polygon.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/investment.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\investment.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/logo/cheffun-logo-dark.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\logo\cheffun-logo-dark.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/logo/cheffun-logo-light.svg
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\logo\cheffun-logo-light.svg
+Content Type: image/svg+xml
+
+Uri: https://web.chef.fun/images/master-baker-burning-pan.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\master-baker-burning-pan.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/master-baker-hero.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\master-baker-hero.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/master-baker-rolling-pin.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\master-baker-rolling-pin.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/referral-bgr-1400.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\referral-bgr-1400.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/referral-bgr-460.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\referral-bgr-460.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/referral-bgr-576.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\referral-bgr-576.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/referral-bgr-768.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\referral-bgr-768.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/images/referral-bgr.png
+File Name: C:\Downloaded Web Sites\web.chef.fun\images\referral-bgr.png
+Content Type: image/png
+
+Uri: https://web.chef.fun/js/jquery.min.js
+File Name: C:\Downloaded Web Sites\web.chef.fun\js\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://web.chef.fun/js/main.js
+File Name: C:\Downloaded Web Sites\web.chef.fun\js\main.js
+Content Type: application/javascript
+
