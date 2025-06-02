@@ -189,15 +189,15 @@
 }
 
 .social-icon {
-  width: clamp(36px, 5vw, 60px);
-  height: clamp(36px, 5vw, 60px);
+  width: clamp(44px, 6vw, 70px);
+  height: clamp(44px, 6vw, 70px);
   border-radius: 16px;
-  background: #8b5cf6;
+  background: #FFB800;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: clamp(1.2rem, 2vw, 2.2rem);
+  font-size: clamp(1.4rem, 2.2vw, 2.4rem);
   box-shadow: 8px 8px 0 0 #000;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
   border: none;
@@ -205,8 +205,8 @@
 }
 
 .social-icon svg {
-  width: clamp(1.2rem, 2vw, 2.2rem);
-  height: clamp(1.2rem, 2vw, 2.2rem);
+  width: clamp(1.4rem, 2.2vw, 2.4rem);
+  height: clamp(1.4rem, 2.2vw, 2.4rem);
   display: block;
   fill: #fff;
   transition: fill 0.2s;
@@ -215,7 +215,7 @@
 .social-icon:hover,
 .social-icon:focus,
 .social-icon:active {
-  background: #FFD600;
+  background: #fff;
   color: #111;
   box-shadow: 8px 8px 0 0 #000;
   transform: translateY(-4px) scale(1.08);
