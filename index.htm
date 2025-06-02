@@ -590,6 +590,11 @@
       const balls = Array.from(document.querySelectorAll('.hero-image.ball1, .hero-image.ball2, .hero-image.ball3, .hero-image.ball4, .hero-image.ball5, .hero-image.ball6, .hero-image.ball7, .hero-image.ball8, .hero-image.ball9, .hero-image.ball10, .hero-image.ball11, .hero-image.ball12'));
       if (!balls.length) return;
 
+      // Устанавливаем черный цвет для всех мячиков
+      balls.forEach(ball => {
+        ball.src = ball.src.replace('logo.png', 'logoblack.png');
+      });
+
       // Получаем размеры контейнера
       const container = document.querySelector('.header-bgr');
       let W = container.offsetWidth;
@@ -608,10 +613,7 @@
           vx: Math.cos(angle) * speed,
           vy: Math.sin(angle) * speed,
           size: size,
-          id: i,
-          originalSrc: ball.src,
-          blackSrc: ball.src.replace('logo.png', 'logoblack.png'),
-          isBlack: false
+          id: i
         };
       });
 
@@ -656,12 +658,6 @@
               a.y -= Math.sin(angle) * overlap/2;
               b.x += Math.cos(angle) * overlap/2;
               b.y += Math.sin(angle) * overlap/2;
-
-              // Меняем цвет при столкновении
-              a.isBlack = !a.isBlack;
-              b.isBlack = !b.isBlack;
-              a.el.src = a.isBlack ? a.blackSrc : a.originalSrc;
-              b.el.src = b.isBlack ? b.blackSrc : b.originalSrc;
             }
           }
         }
