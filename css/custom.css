@@ -736,16 +736,3 @@ header {
   width: 100%;
   height: 100%;
 }
-
-@media (min-width: 992px) {
-  .filmstrip .row {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 2rem;
-  }
-  .filmstrip .col-4 {
-    width: 32%;
-    min-width: 300px;
-    margin-right: 0;
-  }
-}
