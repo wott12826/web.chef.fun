@@ -259,8 +259,8 @@
   position: absolute;
   transition: all 0.3s ease;
   pointer-events: auto;
-  width: clamp(70px, 12vw, 140px);
-  height: clamp(70px, 12vw, 140px);
+  width: clamp(100px, 8vw, 120px);
+  height: clamp(100px, 8vw, 120px);
 }
 
 .hero-image.main {
@@ -309,10 +309,8 @@
     height: 60vh;
   }
   .hero-image {
-    max-width: 22vw;
-    max-height: 22vw;
-    min-width: 60px;
-    min-height: 60px;
+    width: clamp(90px, 7vw, 110px);
+    height: clamp(90px, 7vw, 110px);
   }
   .hero-title {
     font-size: 3.2rem;
@@ -325,10 +323,8 @@
     height: 55vh;
   }
   .hero-image {
-    max-width: 26vw;
-    max-height: 26vw;
-    min-width: 40px;
-    min-height: 40px;
+    width: clamp(70px, 6vw, 90px);
+    height: clamp(70px, 6vw, 90px);
   }
   .hero-image.ball1 { top: 6%; left: 2%; }
   .hero-image.ball2 { top: 6%; right: 2%; }
@@ -432,10 +428,8 @@
     height: 45vh;
   }
   .hero-image {
-    max-width: 32vw;
-    max-height: 32vw;
-    min-width: 28px;
-    min-height: 28px;
+    width: clamp(50px, 5vw, 70px);
+    height: clamp(50px, 5vw, 70px);
   }
   .hero-image.ball1 { top: 7%; left: 2%; }
   .hero-image.ball2 { top: 7%; right: 2%; }
