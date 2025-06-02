@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tokens - Deploy It</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logoblack.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        min-height: 100vh;
+        background-color: #080808 !important;
+        color: #fff;
+        position: relative;
+        overflow-x: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .blur-bg {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: #080808;
+        z-index: -1;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0; left: 0;
+        width: 90px;
+        transition: width 0.28s cubic-bezier(.4,1.2,.4,1), box-shadow 0.2s;
+        height: 100vh;
+        background: #111;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 0 0 0;
+        z-index: 10;
+        gap: 18px;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+      }
+      .sidebar:hover {
+        width: 260px;
+        box-shadow: 4px 0 32px rgba(0,0,0,0.18);
+      }
+      .sidebar-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 18px;
+      }
+      .sidebar-logo img {
+        width: 38px !important;
+        height: 38px !important;
+        max-width: 38px !important;
+        max-height: 38px !important;
+        min-width: 38px !important;
+        min-height: 38px !important;
+        transition: none !important;
+      }
+      .sidebar-logo span {
+        color: #FFD600;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-top: 4px;
+        opacity: 0;
+        transition: opacity 0.22s, font-size 0.28s;
+        white-space: nowrap;
+      }
+      .sidebar:hover .sidebar-logo span {
+        opacity: 1;
+        font-size: 1.2rem;
+      }
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        align-items: flex-start;
+        transition: gap 0.28s;
+      }
+      .sidebar:hover .sidebar-nav {
+        gap: 12px;
+      }
+      .sidebar-divider {
+        width: 60%;
+        height: 1px;
+        background: #222;
+        margin: 12px 0;
+        border-radius: 2px;
+        transition: width 0.28s;
+      }
+      .sidebar:hover .sidebar-divider {
+        width: 85%;
+      }
+      .sidebar-link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        gap: 6px;
+        opacity: 0.85;
+        transition: color 0.2s, opacity 0.2s;
+        position: relative;
+        min-width: 0;
+        padding: 0 0;
+        height: 60px;
+        justify-content: center;
+      }
+      .sidebar:hover .sidebar-link {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 18px;
+        padding: 0 18px 0 18px;
+        min-width: 180px;
+        height: 54px;
+      }
+      .sidebar-link .sidebar-icon {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: transparent;
+        font-size: 1.7rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        flex-shrink: 0;
+        margin-left: 12px;
+      }
+      .sidebar-link.active .sidebar-icon,
+      .sidebar-link:hover .sidebar-icon {
+        background: #FFD600;
+        color: #111;
+        box-shadow: 0 2px 12px rgba(255,214,0,0.15);
+      }
+      .sidebar-link .sidebar-label {
+        font-size: 0.95rem;
+        margin-top: 2px;
+        transition: color 0.2s;
+        opacity: 0;
+        max-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-left: 0;
+        font-weight: 700;
+      }
+      .sidebar:hover .sidebar-link .sidebar-label {
+        opacity: 1;
+        max-width: 200px;
+        margin-left: 8px;
+        transition: opacity 0.22s 0.08s, max-width 0.22s 0.08s, margin-left 0.22s 0.08s, color 0.2s;
+      }
+      .sidebar-link.active .sidebar-label,
+      .sidebar-link:hover .sidebar-label {
+        color: #FFD600;
+      }
+      .sidebar-link .hot-badge {
+        display: none;
+        background: #FFD600;
+        color: #111;
+        font-size: 0.75rem;
+        font-weight: 900;
+        border-radius: 8px;
+        padding: 2px 7px 2px 7px;
+        margin-left: 6px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 1px 4px rgba(255,214,0,0.13);
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        transition: opacity 0.2s;
+      }
+      .sidebar:hover .sidebar-link .hot-badge {
+        display: inline-block;
+        opacity: 1;
+      }
+      .main-content {
+        margin-left: 90px;
+        min-height: 100vh;
+        position: relative;
+        z-index: 1;
+        padding-top: 96px;
+      }
+      .topbar {
+        position: fixed;
+        top: 0;
+        left: 80px;
+        width: calc(100% - 80px);
+        background: #080808;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px 16px 24px;
+        z-index: 2147483547;
+        margin-bottom: 0;
+        height: 80px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .topbar-left {
+        flex-shrink: 0;
+        min-width: 112px;
+        max-width: 240px;
+        background: #FECA18;
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-left: 24px;
+        padding-right: 64px;
+        height: 48px;
+        font-weight: bold;
+      }
+      .topbar-left i {
+        color: #111;
+        font-size: 24px;
+        margin-right: 4px;
+      }
+      .topbar-left span {
+        color: #111;
+        font-weight: bold;
+        font-size: 1rem;
+        display: none;
+      }
+      @media (min-width: 640px) {
+        .topbar-left span {
+          display: flex;
+        }
+      }
+      .topbar-center {
+        flex-grow: 1;
+        margin-left: -48px;
+        background: #0D0D0D;
+        border-radius: 24px;
+        overflow: hidden;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        min-width: 0;
+      }
+      .topbar-right {
+        width: 177.55px;
+        margin-left: 25px;
+        flex-shrink: 0;
+        display: none;
+        align-items: center;
+      }
+      @media (min-width: 640px) {
+        .topbar-right {
+          display: flex;
+        }
+      }
+      .topbar-wallet-btn {
+        width: 100%;
+        height: 48px;
+        background: #FECA18;
+        color: #111;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 24px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, color 0.2s;
+      }
+      .topbar-wallet-btn:hover {
+        background: #fff;
+        color: #FECA18;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 32px 0 28px 0;
+      }
+      .section-title .section-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #181818;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #FFD600;
+      }
+      .section-title .section-icon i {
+        color: #FFD600;
+        font-size: 1.7rem;
+      }
+      .section-title span {
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.3rem;
+      }
+      .hot-token-card {
+        background: url('images/yellowCardBg.3cfa6ea9.svg') center/cover no-repeat;
+        border-radius: 32px;
+        padding: 32px 24px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 340px;
+        min-height: 340px;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 24px rgba(255,214,0,0.10), 0 2px 10px rgba(0,0,0,0.08);
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .hot-token-card:hover {
+        box-shadow: 0 8px 32px rgba(255,214,0,0.18), 0 4px 16px rgba(0,0,0,0.12);
+        transform: translateY(-4px) scale(1.03);
+      }
+      .hot-token-card img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 18px;
+      }
+      .hot-token-card .btn {
+        background: #111;
+        color: #FFD600;
+        border-radius: 24px;
+        padding: 14px 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        width: 100%;
+        margin-top: 18px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 12px rgba(255,214,0,0.10);
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      }
+      .hot-token-card .btn:hover {
+        background: #FFD600;
+        color: #111;
+        box-shadow: 0 4px 18px rgba(255,214,0,0.18);
+      }
+      .tokens-filters {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 24px;
+        margin-bottom: 32px;
+        background: #111;
+        border-radius: 16px;
+        padding: 16px 16px;
+        align-items: center;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+      .tokens-filters::-webkit-scrollbar {
+        display: none;
+      }
+      .tokens-filters input[type="text"] {
+        background: #1A1A1A;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 0 16px 0 44px;
+        height: 48px;
+        font-size: 1.08rem;
+        font-weight: 600;
+        outline: none;
+        width: 260px;
+        background-image: url('images/search.svg');
+        background-repeat: no-repeat;
+        background-position: 16px center;
+        background-size: 20px 20px;
+        transition: box-shadow 0.2s;
+        box-shadow: none;
+      }
+      .tokens-filters input[type="text"]::placeholder {
+        color: #bdbdbd;
+        font-weight: 500;
+      }
+      .tokens-filters select, .tokens-filters button {
+        background: #1A1A1A;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        height: 48px;
+        font-size: 1.08rem;
+        font-weight: 600;
+        padding: 0 44px 0 20px;
+        min-width: 200px;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+        transition: box-shadow 0.2s;
+        box-shadow: none;
+        margin: 0;
+      }
+      .tokens-filters select {
+        background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        background-size: 20px 20px;
+      }
+      .tokens-filters select:focus, .tokens-filters input[type="text"]:focus {
+        box-shadow: 0 0 0 2px #FFD600;
+      }
+      .tokens-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+      }
+      .token-card {
+        background: #141414;
+        border-radius: 32px;
+        padding: 32px 24px 24px 24px;
+        box-shadow: 0 4px 24px rgba(255,214,0,0.08), 0 2px 10px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+        min-height: 320px;
+        position: relative;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .token-card:hover {
+        box-shadow: 0 8px 32px rgba(255,214,0,0.18), 0 4px 16px rgba(0,0,0,0.12);
+        transform: translateY(-4px) scale(1.03);
+      }
+      .token-card .token-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: #FFD600;
+        object-fit: contain;
+        margin-bottom: 18px;
+      }
+      .token-card .token-name {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color: #fff;
+        margin-bottom: 4px;
+        text-align: center;
+      }
+      .token-card .token-symbol {
+        color: #FFD600;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .token-card .token-price {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: #fff;
+        text-align: center;
+      }
+      .token-card .token-change {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .token-card .token-change.positive {
+        background: rgba(0,255,0,0.1);
+        color: #00c853;
+      }
+      .token-card .token-change.negative {
+        background: rgba(255,0,0,0.1);
+        color: #f44336;
+      }
+      .token-card .token-actions {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+      }
+      .token-card .btn {
+        padding: 10px 20px;
+        border-radius: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.3s, box-shadow 0.2s;
+        box-shadow: 0 2px 12px rgba(255,214,0,0.10);
+      }
+      .token-card .btn-primary {
+        background: #FFD600;
+        color: #111;
+      }
+      .token-card .btn-primary:hover {
+        background: #e6c200;
+        box-shadow: 0 4px 18px rgba(255,214,0,0.18);
+      }
+      .token-card .btn-secondary {
+        background: #222;
+        color: #FFD600;
+      }
+      .token-card .btn-secondary:hover {
+        background: #333;
+        color: #fff;
+        box-shadow: 0 4px 18px rgba(255,214,0,0.10);
+      }
+      @media (max-width: 1100px) {
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar {
+          display: none;
+        }
+      }
+      @media (max-width: 900px) {
+        .tokens-list {
+          gap: 18px;
+        }
+        .token-card {
+          width: 100%;
+          min-width: 0;
+        }
+        .hot-token-card {
+          width: 100%;
+          min-width: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        .tokens-section {
+          padding: 24px 4px 0 4px;
+        }
+        .tokens-header-title {
+          font-size: 1.2rem;
+        }
+        .token-card {
+          padding: 18px 8px 12px 8px;
+          border-radius: 18px;
+        }
+        .hot-token-card {
+          padding: 18px 8px 12px 8px;
+          border-radius: 18px;
+        }
+      }
+      /* Блюр и затемнение */
+      #main-blur {
+        filter: blur(14px) brightness(0.7);
+        pointer-events: none;
+        user-select: none;
+      }
+      .modal-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.55);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .launch-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        color: #111;
+        border-radius: 32px;
+        box-shadow: 0 8px 48px rgba(0,0,0,0.25);
+        padding: 48px 36px 36px 36px;
+        min-width: 340px;
+        max-width: 90vw;
+        z-index: 10000;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .launch-modal h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 18px;
+      }
+      .launch-modal p {
+        font-size: 1.1rem;
+        margin-bottom: 28px;
+      }
+      .launch-modal .pay-btn {
+        background: #FFD600;
+        color: #111;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border-radius: 24px;
+        padding: 14px 48px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 18px rgba(255,214,0,0.18);
+        margin-bottom: 18px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      }
+      .launch-modal .pay-btn:hover {
+        background: #fff;
+        color: #FFD600;
+        box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+      }
+      .launch-modal .modal-note {
+        color: #888;
+        font-size: 0.98rem;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blur-bg"></div>
+    <div class="sidebar">
+      <div class="sidebar-logo">
+        <img src="images/logo.png" alt="Chef.fun">
+        <span>Chef.fun</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-link active"><span class="sidebar-icon"><i class="fas fa-rocket"></i></span><span class="sidebar-label">Tokens</span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-trophy"></i></span><span class="sidebar-label">Hall of fame</span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-plus-square"></i></span><span class="sidebar-label">Deploy</span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-user"></i></span><span class="sidebar-label">Profile</span></a>
+        <div class="sidebar-divider"></div>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-fire"></i></span><span class="sidebar-label">Referral <span class="hot-badge">HOT</span></span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-question-circle"></i></span><span class="sidebar-label">FAQ</span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-chart-bar"></i></span><span class="sidebar-label">Seasons Leaderboard</span></a>
+        <div class="sidebar-divider"></div>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-book"></i></span><span class="sidebar-label">Docs</span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fas fa-chart-line"></i></span><span class="sidebar-label">Chart</span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fab fa-telegram-plane"></i></span><span class="sidebar-label">Telegram</span></a>
+        <a href="#" class="sidebar-link"><span class="sidebar-icon"><i class="fab fa-x-twitter"></i></span><span class="sidebar-label">Twitter/X</span></a>
+      </nav>
+    </div>
+    <div class="main-content" id="main-blur">
+      <div class="topbar">
+        <div class="topbar-left">
+          <i class="fas fa-trophy"></i>
+          <span>Top 10</span>
+        </div>
+        <div class="topbar-center">
+          <!-- Здесь может быть бегущая строка или новости -->
+        </div>
+        <div class="topbar-right">
+          <button class="topbar-wallet-btn">Connect Wallet</button>
+        </div>
+      </div>
+      <div class="section-title"><span class="section-icon"><i class="fa-solid fa-coins"></i></span><span>Recent Buys</span></div>
+      <div style="height: 32px;"></div>
+      <div class="section-title"><span class="section-icon"><i class="fa-solid fa-fire"></i></span><span>Hot tokens</span></div>
+      <div style="height: 32px;"></div>
+      <div class="hot-token-card" style="background: url('images/yellowCardBg.3cfa6ea9.svg') center/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 420px; min-height: 420px; margin-bottom: 32px; border-radius: 40px; box-shadow: 0 4px 24px rgba(255,214,0,0.10), 0 2px 10px rgba(0,0,0,0.08); padding: 32px 24px 24px 24px;">
+        <img src="images/logo.png" alt="Hot Token" style="width: 180px; height: 180px; object-fit: contain; margin: 0 auto; display: block;">
+        <div style="flex: 1 1 auto; width: 100%;"></div>
+        <button class="btn" style="background: #111; color: #FFD600; border-radius: 32px; padding: 18px 0; font-size: 1.2rem; font-weight: 700; width: 85%; margin-bottom: 0; border: none; cursor: pointer; box-shadow: 0 2px 12px rgba(255,214,0,0.10); transition: background 0.2s, color 0.2s, box-shadow 0.2s; align-self: center;">Explore top tokens</button>
+      </div>
+      <div class="tokens-section">
+        <div class="tokens-filters">
+          <input type="text" placeholder="Search...">
+          <select><option>Freshly Aped</option></select>
+          <select><option>Descending</option></select>
+          <select><option>All</option></select>
+          <select><option>Select Chains</option></select>
+        </div>
+        <div class="tokens-list">
+          <div class="token-card">
+            <img src="images/logo.png" alt="Token" class="token-icon">
+            <div class="token-name">Deploy It</div>
+            <div class="token-symbol">$DEPIT</div>
+            <div class="token-price">$0.00001234</div>
+            <div class="token-change positive">+12.34%</div>
+            <div class="token-actions">
+              <a href="#" class="btn btn-primary">Trade</a>
+              <a href="#" class="btn btn-secondary">Chart</a>
+            </div>
+          </div>
+          <div class="token-card">
+            <img src="images/logo.png" alt="Token" class="token-icon">
+            <div class="token-name">Sample Token</div>
+            <div class="token-symbol">$SMPL</div>
+            <div class="token-price">$0.00005678</div>
+            <div class="token-change negative">-5.67%</div>
+            <div class="token-actions">
+              <a href="#" class="btn btn-primary">Trade</a>
+              <a href="#" class="btn btn-secondary">Chart</a>
+            </div>
+          </div>
+          <div class="token-card">
+            <img src="images/logo.png" alt="Token" class="token-icon">
+            <div class="token-name">Test Token</div>
+            <div class="token-symbol">$TEST</div>
+            <div class="token-price">$0.00008901</div>
+            <div class="token-change positive">+8.90%</div>
+            <div class="token-actions">
+              <a href="#" class="btn btn-primary">Trade</a>
+              <a href="#" class="btn btn-secondary">Chart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay">
+      <div class="launch-modal">
+        <h2>Subscribe to Launch</h2>
+        <p>Get access to instant token deployment, advanced tools, and exclusive airdrops.<br><br><b>Subscription: $DEPIT</b></p>
+        <button class="pay-btn">Pay with $DEPIT</button>
+        <div class="modal-note">You will be redirected to the payment gateway.<br>After payment, you'll be able to launch your token instantly.</div>
+      </div>
+    </div>
+  </body>
+</html> 

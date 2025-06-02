@@ -147,6 +147,7 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  border-radius: 32px;
 }
 
 .hero-content {
@@ -169,6 +170,17 @@
   position: relative;
   z-index: 10;
   letter-spacing: 0.1em;
+  transition:
+    color 0.22s cubic-bezier(.4,1.2,.4,1),
+    text-shadow 0.22s cubic-bezier(.4,1.2,.4,1),
+    transform 0.22s cubic-bezier(.4,1.2,.4,1);
+  cursor: pointer;
+}
+
+.hero-title:hover, .hero-title:focus {
+  color: #FFD600;
+  text-shadow: 0 0 32px #FFD60088, 0 2px 8px #FFD60044;
+  transform: scale(1.04) rotate(-2deg);
 }
 
 .hero-social {
@@ -735,4 +747,155 @@ header {
   justify-content: center;
   width: 100%;
   height: 100%;
+}
+
+/* --- Topbar styles for hero section --- */
+.hero-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  background: #FFD600;
+  border-radius: 16px;
+  padding: 14px 36px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.main-nav {
+  display: flex;
+  gap: 32px;
+  white-space: nowrap;
+  align-items: center;
+}
+.main-nav a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: #fff;
+}
+.topbar-icons {
+  display: flex;
+  gap: 32px;
+  white-space: nowrap;
+  align-items: center;
+}
+.topbar-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  font-size: 2.2rem;
+  background: #FECA18;
+  color: #fff;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 8px 8px 0 0 #000;
+}
+.topbar-icon:hover, .topbar-icon:focus {
+  background: #fff;
+  color: #FECA18;
+  box-shadow: 8px 8px 0 0 #000;
+  transform: translateY(-4px) scale(1.08);
+}
+.topbar-icon.telegram,
+.topbar-icon.x,
+.topbar-icon.chart {
+  background: #FECA18;
+  color: #fff;
+}
+.topbar-launch {
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.7em 2em;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  white-space: nowrap;
+}
+.topbar-launch:hover {
+  background: #fff;
+  color: #111;
+}
+@media (min-width: 992px) {
+  .hero-topbar {
+    padding: 18px 48px;
+    gap: 56px;
+    border-radius: 20px;
+  }
+  .main-nav a {
+    font-size: 1.3rem;
+  }
+  .topbar-icon {
+    font-size: 1.7rem;
+    width: 48px;
+    height: 48px;
+  }
+  .topbar-launch {
+    font-size: 1.22rem;
+    height: 48px;
+    padding: 0.8em 2.4em;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-topbar {
+    padding: 22px 64px;
+    gap: 64px;
+    border-radius: 24px;
+  }
+  .main-nav a {
+    font-size: 1.4rem;
+  }
+  .topbar-icon {
+    font-size: 1.9rem;
+    width: 54px;
+    height: 54px;
+  }
+  .topbar-launch {
+    font-size: 1.28rem;
+    height: 54px;
+    padding: 0.9em 2.8em;
+  }
+}
+@media (max-width: 768px) {
+  .hero-topbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 8px;
+    top: 8px;
+    white-space: normal;
+    overflow-x: visible;
+    border-radius: 12px;
+  }
+  .main-nav a {
+    font-size: 1.1rem;
+  }
+  .topbar-icon {
+    font-size: 1.2rem;
+    width: 38px;
+    height: 38px;
+  }
+  .topbar-launch {
+    font-size: 1rem;
+    height: 38px;
+    padding: 0.6em 1.2em;
+  }
 }
