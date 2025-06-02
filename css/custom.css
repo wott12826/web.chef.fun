@@ -255,12 +255,18 @@
   pointer-events: none;
 }
 
-.hero-image {
+.hero-images .hero-image {
   position: absolute;
   transition: all 0.3s ease;
-  pointer-events: auto;
+  pointer-events: auto !important;
   width: clamp(140px, 10vw, 160px);
   height: clamp(140px, 10vw, 160px);
+  cursor: pointer;
+}
+
+.hero-images .hero-image:hover {
+  filter: brightness(0) !important;
+  -webkit-filter: brightness(0) !important;
 }
 
 .hero-image.main {
@@ -323,8 +329,8 @@
     height: 55vh;
   }
   .hero-image {
-    width: clamp(70px, 6vw, 90px);
-    height: clamp(70px, 6vw, 90px);
+    width: clamp(30px, 4vw, 40px) !important;
+    height: clamp(30px, 4vw, 40px) !important;
   }
   .hero-image.ball1 { top: 6%; left: 2%; }
   .hero-image.ball2 { top: 6%; right: 2%; }
@@ -428,8 +434,8 @@
     height: 45vh;
   }
   .hero-image {
-    width: clamp(50px, 5vw, 70px);
-    height: clamp(50px, 5vw, 70px);
+    width: clamp(25px, 3vw, 35px) !important;
+    height: clamp(25px, 3vw, 35px) !important;
   }
   .hero-image.ball1 { top: 7%; left: 2%; }
   .hero-image.ball2 { top: 7%; right: 2%; }
@@ -458,6 +464,7 @@
   }
 }
 
+/* Удаляем старые стили для отдельных шаров */
 .hero-image.ball1:hover,
 .hero-image.ball2:hover,
 .hero-image.ball3:hover,
@@ -465,8 +472,8 @@
 .hero-image.ball5:hover,
 .hero-image.ball6:hover,
 .hero-image.ball7:hover {
-  filter: invert(1);
-  transition: filter 0.2s;
+  filter: brightness(0) !important;
+  -webkit-filter: brightness(0) !important;
 }
 
 .lfg-letter {

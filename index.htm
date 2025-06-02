@@ -6,7 +6,7 @@
     <title>Deploy It</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logoblack.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -49,18 +49,18 @@
           </div>
         </div>
         <div class="hero-images">
-          <img src="images/1.png" alt="" class="hero-image ball1">
-          <img src="images/p7.png" alt="" class="hero-image ball2">
-          <img src="images/p6.png" alt="" class="hero-image ball3">
-          <img src="images/p4.png" alt="" class="hero-image ball4">
-          <img src="images/p3.png" alt="" class="hero-image ball5">
-          <img src="images/p5.png" alt="" class="hero-image ball6">
-          <img src="images/p2.png" alt="" class="hero-image ball7">
-          <img src="images/p3.png" alt="" class="hero-image ball8">
-          <img src="images/p4.png" alt="" class="hero-image ball9">
-          <img src="images/p5.png" alt="" class="hero-image ball10">
-          <img src="images/p6.png" alt="" class="hero-image ball11">
-          <img src="images/p7.png" alt="" class="hero-image ball12">
+          <img src="images/logo.png" alt="" class="hero-image ball1">
+          <img src="images/logo.png" alt="" class="hero-image ball2">
+          <img src="images/logo.png" alt="" class="hero-image ball3">
+          <img src="images/logo.png" alt="" class="hero-image ball4">
+          <img src="images/logo.png" alt="" class="hero-image ball5">
+          <img src="images/logo.png" alt="" class="hero-image ball6">
+          <img src="images/logo.png" alt="" class="hero-image ball7">
+          <img src="images/logo.png" alt="" class="hero-image ball8">
+          <img src="images/logo.png" alt="" class="hero-image ball9">
+          <img src="images/logo.png" alt="" class="hero-image ball10">
+          <img src="images/logo.png" alt="" class="hero-image ball11">
+          <img src="images/logo.png" alt="" class="hero-image ball12">
         </div>
       </div>
     </section>
@@ -522,8 +522,11 @@
     <footer class="py-5">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 d-flex justify-center justify-start-md mb-4 no-mb-md">
-            <img src="images/logo/cheffun-logo-light.svg">
+          <div class="col-12 col-md-6 d-flex justify-center justify-start-md mb-4 no-mb-md align-items-center">
+            <div style="display: flex; align-items: center;">
+              <img src="images/logo.png" alt="DEPIT" style="height: 40px; margin-right: 10px;">
+              <span style="font-size: 28px; font-weight: bold; color: #fff; line-height: 40px;">DEPIT</span>
+            </div>
           </div>
           <div class="col-12 col-md-6">
             <div class="d-flex g-2 justify-center justify-end-md">
@@ -563,6 +566,22 @@
             icon.classList.remove('fa-times');
           });
         });
+
+        // Обработка эффекта наведения для логотипов
+        const logoImages = document.querySelectorAll('.hero-image');
+        
+        logoImages.forEach(img => {
+          const originalSrc = img.src;
+          const blackSrc = originalSrc.replace('logo.png', 'logoblack.png');
+          
+          img.addEventListener('mouseenter', () => {
+            img.src = blackSrc;
+          });
+          
+          img.addEventListener('mouseleave', () => {
+            img.src = originalSrc;
+          });
+        });
       });
     </script>
     <script>
@@ -589,7 +608,10 @@
           vx: Math.cos(angle) * speed,
           vy: Math.sin(angle) * speed,
           size: size,
-          id: i
+          id: i,
+          originalSrc: ball.src,
+          blackSrc: ball.src.replace('logo.png', 'logoblack.png'),
+          isBlack: false
         };
       });
 
@@ -634,6 +656,12 @@
               a.y -= Math.sin(angle) * overlap/2;
               b.x += Math.cos(angle) * overlap/2;
               b.y += Math.sin(angle) * overlap/2;
+
+              // Меняем цвет при столкновении
+              a.isBlack = !a.isBlack;
+              b.isBlack = !b.isBlack;
+              a.el.src = a.isBlack ? a.blackSrc : a.originalSrc;
+              b.el.src = b.isBlack ? b.blackSrc : b.originalSrc;
             }
           }
         }
