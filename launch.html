@@ -560,7 +560,8 @@
       .modal-overlay {
         position: fixed;
         top: 0; left: 0; width: 100vw; height: 100vh;
-        background: rgba(0,0,0,0.55);
+        background: rgba(0,0,0,0.75);
+        backdrop-filter: blur(8px);
         z-index: 9999;
         display: flex;
         align-items: center;
@@ -571,48 +572,105 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #fff;
-        color: #111;
+        background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+        color: #fff;
         border-radius: 32px;
-        box-shadow: 0 8px 48px rgba(0,0,0,0.25);
-        padding: 48px 36px 36px 36px;
-        min-width: 340px;
+        box-shadow: 0 12px 64px rgba(0,0,0,0.35), 0 2px 8px rgba(255,214,0,0.12);
+        padding: 48px;
+        min-width: 420px;
         max-width: 90vw;
         z-index: 10000;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
+        border: 1px solid rgba(255,214,0,0.15);
       }
       .launch-modal h2 {
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-weight: 800;
-        margin-bottom: 18px;
+        margin-bottom: 24px;
+        background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 12px rgba(255,214,0,0.15);
       }
       .launch-modal p {
-        font-size: 1.1rem;
-        margin-bottom: 28px;
+        font-size: 1.15rem;
+        margin-bottom: 32px;
+        color: #e0e0e0;
+        line-height: 1.6;
+      }
+      .launch-modal .subscription-price {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255,214,0,0.1);
+        padding: 12px 24px;
+        border-radius: 16px;
+        margin: 24px 0;
+      }
+      .launch-modal .subscription-price img {
+        width: 32px;
+        height: 32px;
+      }
+      .launch-modal .subscription-price span {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #FFD600;
+      }
+      .launch-modal .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 24px 0;
+        text-align: left;
+      }
+      .launch-modal .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #fff;
+      }
+      .launch-modal .feature-item i {
+        color: #FFD600;
+        font-size: 1.2rem;
       }
       .launch-modal .pay-btn {
-        background: #FFD600;
+        background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
         color: #111;
-        font-weight: 700;
-        font-size: 1.1rem;
-        border-radius: 24px;
-        padding: 14px 48px;
+        font-weight: 800;
+        font-size: 1.2rem;
+        border-radius: 28px;
+        padding: 16px 64px;
         border: none;
         cursor: pointer;
-        box-shadow: 0 4px 18px rgba(255,214,0,0.18);
-        margin-bottom: 18px;
-        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 24px rgba(255,214,0,0.25);
+        margin: 32px 0 24px 0;
+        transition: all 0.3s cubic-bezier(.4,1.2,.4,1);
+        width: 100%;
+        max-width: 320px;
+        position: relative;
+        overflow: hidden;
       }
       .launch-modal .pay-btn:hover {
-        background: #fff;
-        color: #FFD600;
-        box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 32px rgba(255,214,0,0.35);
+      }
+      .launch-modal .pay-btn:active {
+        transform: translateY(1px) scale(0.98);
       }
       .launch-modal .modal-note {
         color: #888;
-        font-size: 0.98rem;
-        margin-top: 8px;
+        font-size: 0.95rem;
+        margin-top: 16px;
+        line-height: 1.5;
+      }
+      .launch-modal .modal-note a {
+        color: #FFD600;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .launch-modal .modal-note a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -708,10 +766,38 @@
     </div>
     <div class="modal-overlay">
       <div class="launch-modal">
-        <h2>Subscribe to Launch</h2>
-        <p>Get access to instant token deployment, advanced tools, and exclusive airdrops.<br><br><b>Subscription: $DEPIT</b></p>
-        <button class="pay-btn">Pay with $DEPIT</button>
-        <div class="modal-note">You will be redirected to the payment gateway.<br>After payment, you'll be able to launch your token instantly.</div>
+        <h2>Premium Access</h2>
+        <p>Unlock exclusive features and become part of an elite community of token creators and investors.</p>
+        
+        <div class="subscription-price">
+          <img src="images/logo.png" alt="DEPIT">
+          <span>5,000 $DEPIT</span>
+        </div>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <i class="fas fa-rocket"></i>
+            <span>Instant Token Deployment</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-tools"></i>
+            <span>Advanced Trading Tools</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-gift"></i>
+            <span>Exclusive Airdrops Access</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-gem"></i>
+            <span>Premium Community Benefits</span>
+          </div>
+        </div>
+
+        <button class="pay-btn">Subscribe Now</button>
+        <div class="modal-note">
+          By subscribing, you agree to our <a href="#">Terms of Service</a><br>
+          Need help? <a href="#">Contact our support team</a>
+        </div>
       </div>
     </div>
   </body>
