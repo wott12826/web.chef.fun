@@ -438,6 +438,41 @@
     width: 100%;
     box-sizing: border-box;
   }
+
+  /* Центрирование overlay-content в секции Referral Program на мобильных */
+  .card-media {
+    position: relative;
+  }
+  .card-media > .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 95vw;
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2rem 1rem;
+    z-index: 2;
+  }
+  .card-media > .overlay-content h2,
+  .card-media > .overlay-content p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .card-media > .overlay-content a.btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    width: auto;
+  }
 }
 
 @media (max-width: 480px) {
