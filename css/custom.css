@@ -648,6 +648,21 @@ header {
     font-size: 1.1rem;
     padding: 0.5em 1em;
   }
+  .filmstrip .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .filmstrip .col-4 {
+    width: 33.3333%;
+    margin-right: 0;
+    flex: 0 0 33.3333%;
+    box-sizing: border-box;
+    padding: 0 12px 24px 12px;
+  }
+  .filmstrip .col-4:last-child {
+    margin-right: 0;
+  }
 }
 
 /* Tablet & Mobile (max-width: 921px) */
