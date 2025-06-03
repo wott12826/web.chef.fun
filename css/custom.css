@@ -104,7 +104,7 @@
   min-height: 600px;
   height: 80vh;
   background: #FFD600;
-  border-radius: 10px;
+  border-radius: 32px !important;
   overflow: hidden;
   display: flex;
   align-items: center;
